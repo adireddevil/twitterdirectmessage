@@ -1,4 +1,4 @@
-package posttweet
+package directmsg
 
 import (
 	s "strings"

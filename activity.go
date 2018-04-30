@@ -77,7 +77,7 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error) {
 
 		//code, msg := GDrive.CreateFile(accessToken, fileFullPath, emailAddr, role, sendNotification, timeout)
 
-		code, msg := twitter.PostTweet(consumerKey, consumerSecret, accessToken, accessTokenSecret, tweet)
+		code, msg := twitter.DirectMessage(consumerKey, consumerSecret, accessToken, accessTokenSecret, directmsg,user)
 		context.SetOutput("statusCode", code)
 
 		context.SetOutput("message", msg)
